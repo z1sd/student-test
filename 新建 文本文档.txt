@@ -14,7 +14,8 @@ vector<int> calculateLPS(string pattern) {
         if (pattern[i] == pattern[len]) {
             len++;
             lps[i] = len;
-            i++;
+
+i++;
         } else {
             if (len != 0) {
                 len = lps[len - 1];
@@ -26,7 +27,6 @@ vector<int> calculateLPS(string pattern) {
     }
 
     return lps;
-}
 
 vector<int> KMP(string text, string pattern) {
     vector<int> lps = calculateLPS(pattern);
